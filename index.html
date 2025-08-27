@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Equation Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; }
+        .container { background: #fff; padding: 2em; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 2px 8px #0001; }
+        .equation, .point { font-size: 1.2em; margin-bottom: 1em; }
+        .expander { margin-top: 2em; }
+        summary { cursor: pointer; font-weight: bold; }
+        .latex { background: #f4f4f4; padding: 1em; border-radius: 6px; margin-top: 1em; }
+        button { padding: 0.5em 1em; font-size: 1em; border-radius: 4px; border: 1px solid #888; background: #eee; cursor: pointer; }
+        .result { margin-top: 1em; font-weight: bold; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="equation" id="equation"></div>
+        <div class="point" id="point"></div>
+        <button id="checkBtn">Check if point is on the line</button>
+        <div class="result" id="result"></div>
+        <details class="expander">
+            <summary>Show Solution</summary>
+            <div class="latex" id="latex"></div>
+        </details>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
