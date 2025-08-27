@@ -28,7 +28,7 @@ function generateQuestion() {
     document.getElementById('latex').innerHTML = '';
     // Close expander if open
     const expander = document.querySelector('.expander');
-    if (expander.open) expander.open = false;
+    if (expander.open) expander.removeAttribute('open');
 }
 
 // Render LaTeX solution
@@ -45,9 +45,8 @@ document.querySelector('.expander').addEventListener('toggle', function(e) {
     if (this.open) renderLatex();
 });
 
-// Change button to 'Next' and generate new question on click
+// Set up Next button to generate new question on click
 const nextBtn = document.getElementById('checkBtn');
-nextBtn.textContent = 'Next';
 nextBtn.onclick = generateQuestion;
 
 // Initial question
